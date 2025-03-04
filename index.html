@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AMBA QR</title>
+    <link rel="stylesheet" href="s.css">
+    
+</head>
+<body>
+    <div class="dashboard">
+        <h1 style="text-align: center;">AMBA QR CODE</h1>
+        
+        
+        <div class="form">
+            <input type="text" id="partyName" placeholder="Enter Party Name" />
+            <input type="text" id="sku" placeholder="Enter SKU" />
+            <input type="text" id="thickness" placeholder="Enter Thickness" />
+            <input type="number" id="quantity" placeholder="Enter Quantity" />
+            <button onclick="generateQRCode()">Generate QR Code</button>
+        </div>
+
+       
+        <div id="qrContainer" class="qr-container"></div>
+
+       
+        <button onclick="printQRs()">Print QR Codes</button>
+    </div>
+
+    <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
+    <script src="s.js"></script>
+</body>
+</html>
