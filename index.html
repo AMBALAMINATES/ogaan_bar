@@ -3,31 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AMBA QR</title>
-    <link rel="stylesheet" href="s.css">
-    
+    <title>QR Code Generator and Scanner</title>
+    <link rel="stylesheet" href="duplicate.css"> 
 </head>
 <body>
-    <div class="dashboard">
-        <h1 style="text-align: center;">AMBA QR CODE</h1>
-        
-        
-        <div class="form">
-            <input type="text" id="partyName" placeholder="Enter Party Name" />
-            <input type="text" id="sku" placeholder="Enter SKU" />
-            <input type="text" id="thickness" placeholder="Enter Thickness" />
-            <input type="number" id="quantity" placeholder="Enter Quantity" />
-            <button onclick="generateQRCode()">Generate QR Code</button>
-        </div>
 
-       
-        <div id="qrContainer" class="qr-container"></div>
+   
+    <h2>Generate QR Codes</h2>
+    <label for="partyName">Party Name:</label>
+    <input type="text" id="partyName"><br>
 
-       
-        <button onclick="printQRs()">Print QR Codes</button>
-    </div>
+    <label for="sku">SKU:</label>
+    <input type="text" id="sku"><br>
+
+    <label for="thickness">Thickness:</label>
+    <input type="text" id="thickness"><br>
+
+    <label for="requiredQuantity">Required Quantity:</label>
+    <input type="number" id="requiredQuantity"><br>
+
+    <label for="quantity">Quantity (No. of QR Codes):</label>
+    <input type="number" id="quantity"><br>
+
+    <button onclick="generateQRCode()">Generate QR Codes</button>
+
+    
+    <div id="qrContainer"></div>
+
+   
+    <h2>Scanned QR Codes</h2>
+    <table id="qrDataTable">
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>SKU</th>
+                <th>Party Name</th>
+                <th>Required Qty</th>
+                <th>Scanned Qty</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+
+    <!-- Print Button -->
+    <button onclick="printQRCode()">Print QR Codes</button>
 
     <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
-    <script src="s.js"></script>
+    <script src="nik.js"></script> 
+
 </body>
 </html>
